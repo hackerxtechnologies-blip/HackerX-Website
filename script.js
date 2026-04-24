@@ -42,4 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         }
     }, 500);
+
+    // Initialize Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
