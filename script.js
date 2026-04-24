@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('js-enabled');
     // Scroll Reveal Animation
     const observerOptions = {
         threshold: 0.1

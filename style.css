@@ -151,10 +151,12 @@ nav .container {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.8rem;
     padding: 1rem 2.5rem;
-    background: transparent;
-    border: 1px solid var(--accent-cyan);
+    min-width: 200px;
+    background: rgba(0, 243, 255, 0.05);
+    border: 2px solid var(--accent-cyan);
     color: var(--accent-cyan);
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -353,16 +355,22 @@ footer {
 }
 
 /* Reveal Animations */
-section, .service-card, .project-card {
+.js-enabled section, 
+.js-enabled .service-card, 
+.js-enabled .project-card {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-section.visible, .service-card.visible, .project-card.visible {
-    opacity: 1;
-    transform: translateY(0);
+section.visible, 
+.service-card.visible, 
+.project-card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
     }
