@@ -3,133 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HackerX Technologies | Next-Gen Software Solutions</title>
-    <meta name="description" content="HackerX Technologies specializes in AI, custom software development, and cloud infrastructure. Building the future of technology.">
+    <title>HACKERX // ULTRA_TERMINAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="logo">HACKER<span>X</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <!-- HUD Layer -->
+    <div class="noise-overlay"></div>
+    <div class="scanline-layer"></div>
+    <div class="bg-data-grid"></div>
+    
+    <div class="cursor-reticle">
+        <div class="cursor-coords">X:00.0 Y:00.0</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hud-nav">
+        <div class="container-wide">
+            <div class="logo glitch-text" data-text="HACKERX">HACKERX</div>
+            <div class="nav-links">
+                <a href="services.html">[ SERVICES ]</a>
+                <a href="archive.html">[ ARCHIVE ]</a>
+                <a href="#contact">[ UPLINK ]</a>
+            </div>
+            <div class="status-monitor">
+                <span class="pulse-dot"></span> 
+                CORE_TEMP: 32°C // STATUS: SECURE
+            </div>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="container hero-content">
-            <h2>Introducing</h2>
-            <h1>HACKERX<br>TECHNOLOGIES</h1>
-            <p>We are a forward-thinking technology organization dedicated to pushing the boundaries of what's possible in the digital realm.</p>
-            <a href="#projects" class="btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
-                EXPLORE PROJECTS
-            </a>
-        </div>
-    </header>
-
-    <section id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Expertise</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.105 4 4 0 0 0 7.327-2.128A3 3 0 1 0 12 5z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 1 0 12 5"/><path d="M14.527 10.895A4 4 0 0 0 12 5"/><path d="M12 5v14"/><path d="M12 19a3 3 0 1 0 5.997-.125 4 4 0 0 0 2.526-5.77 4 4 0 0 0-.52-8.105 4 4 0 0 0-7.327 2.128A3 3 0 1 0 12 19z"/><path d="M15 11a4.5 4.5 0 0 0-3 4"/><path d="M17.997 18.875A3 3 0 1 0 12 19"/><path d="M9.473 13.105A4 4 0 0 0 12 19"/></svg>
-                    <h3>AI and Machine Learning</h3>
-                    <p>Explore and Innovate with cutting-edge artificial intelligence solutions tailored to your needs.</p>
-                </div>
-                <div class="service-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    <h3>Custom Software Development</h3>
-                    <p>Build the Future with robust, scalable, and high-performance software applications.</p>
-                </div>
-                <div class="service-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="M13 12l-3 5h4l-3 5"/></svg>
-                    <h3>Cloud Infrastructure</h3>
-                    <p>Scale and Innovate using secure, efficient, and resilient cloud architecture.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Project Archive</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <i data-lucide="receipt"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Society Maintenance Billing System</h3>
-                        <p>A comprehensive mobile billing solution for societies, featuring automated invoice generation and history tracking.</p>
-                        <a href="https://github.com/hackerxtechnologies-blip/Society-Maintenance-Billing-System" target="_blank" class="btn download-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            DOWNLOAD ON GITHUB
-                        </a>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <i data-lucide="bot"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Jarvis AI Agent</h3>
-                        <p>A powerful, voice-activated desktop assistant designed to optimize workflow through intelligent automation and system control.</p>
-                        <a href="https://github.com/hackerxtechnologies/jarvis-ai" target="_blank" class="btn download-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            DOWNLOAD ON GITHUB
-                        </a>
+    <!-- Main Terminal Area -->
+    <main>
+        <section class="hero-ultra">
+            <div class="container-wide">
+                <div class="hero-header reveal-stagger">
+                    <div class="tech-id">[ NODE_INIT_662 ]</div>
+                    <h1 class="glitch-text" data-text="WELCOME TO">WELCOME TO</h1>
+                    <h1 class="glitch-text text-primary" data-text="HACKERX">HACKERX</h1>
+                    <p class="hero-desc">Developing high-performance software for the digital vanguard. We build the infrastructure that powers the modern world.</p>
+                    <div class="hero-actions">
+                        <a href="archive.html" class="btn-ultra">ACCESS_ARCHIVE</a>
+                        <a href="services.html" class="btn-ultra">MANIFEST_LOAD</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <div class="underline"></div>
-                </div>
-                <p>Ready to start your next project or have questions about our services? Our team is standing by.</p>
-                <div class="email-display">hackerxtechnologies@gmail.com</div>
-                
-                <div class="social-links">
-                    <a href="https://www.instagram.com/hackerxtechnologies/" target="_blank" class="social-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="https://x.com/HackerXTech/status/2046523601730584724?s=20" target="_blank" class="social-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                    </a>
-                    <a href="https://youtube.com/@hackerxtech?si=eS-YvG6Q0_z-rVPD" target="_blank" class="social-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.4 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
-                    </a>
-                </div>
+        <!-- Preview Grid (HUD Style) -->
+        <section id="sectors" class="sectors-ultra">
+            <div class="container-wide">
+                <div class="grid-layout">
+                    <div class="ultra-card reveal-stagger">
+                        <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                        <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                        <div class="card-meta">SECTOR_01 // AI_ML</div>
+                        <h2>AI & Machine Learning</h2>
+                        <p>Neural network optimization and predictive analytics engines built for unprecedented scale.</p>
+                        <div class="card-status">BITRATE: 4.2GBPS</div>
+                    </div>
 
-                <a href="mailto:hackerxtechnologies@gmail.com" class="btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    CONTACT US
-                </a>
+                    <div class="ultra-card reveal-stagger">
+                        <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                        <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                        <div class="card-meta">SECTOR_02 // DEV_OPS</div>
+                        <h2>Custom Software</h2>
+                        <p>Bespoke digital ecosystems designed with surgical precision and clean-code standards.</p>
+                        <div class="card-status">CODE_SEC: GRADE_A</div>
+                    </div>
+
+                    <div class="ultra-card reveal-stagger">
+                        <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                        <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                        <div class="card-meta">SECTOR_03 // CLOUD_INFRA</div>
+                        <h2>Cloud Infrastructure</h2>
+                        <p>Resilient, high-availability server clusters with zero-latency global delivery protocols.</p>
+                        <div class="card-status">NODES: 1,024 ACTIVE</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 HackerX Technologies. All rights reserved. <br> Built for the future.</p>
+        <!-- Contact Section in HUD Style -->
+        <section id="contact" class="contact-ultra">
+            <div class="container-wide">
+                <div class="ultra-card reveal-stagger">
+                    <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                    <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                    <div class="card-meta">UPLINK_ESTABLISHED</div>
+                    <h2>CONNECT_TO_GRID</h2>
+                    <div class="contact-links-ultra">
+                        <a href="https://www.instagram.com/hackerxtechnologies/" target="_blank" class="social-btn-ultra">INSTAGRAM</a>
+                        <a href="https://x.com/HackerXTech/status/2046523601730584724?s=20" target="_blank" class="social-btn-ultra">X_CORP</a>
+                        <a href="https://youtube.com/@hackerxtech?si=eS-YvG6Q0_z-rVPD" target="_blank" class="social-btn-ultra">YOUTUBE</a>
+                    </div>
+                    <div class="email-ultra">hackerxtechnologies@gmail.com</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer HUD -->
+    <footer class="hud-footer">
+        <div class="container-wide">
+            <div class="footer-wrap">
+                <div class="copyright">© 2024 HACKERX_TECHNOLOGIES // GRID_CONNECTED</div>
+                <div class="terminal-footer">
+                    [ SYS_LOG ]: UPLINK_STABLE // POS: 42.12N 88.04W
+                </div>
+            </div>
         </div>
     </footer>
 
