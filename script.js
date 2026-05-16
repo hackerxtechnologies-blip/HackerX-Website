@@ -1,30 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- CUSTOM CURSOR & RETICLE ---
+    // --- CUSTOM HUD CURSOR ---
     const cursor = document.querySelector('.cursor-reticle');
     const coords = document.querySelector('.cursor-coords');
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        coords.innerText = `X:${(e.clientX/window.innerWidth * 100).toFixed(1)} Y:${(e.clientY/window.innerHeight * 100).toFixed(1)}`;
-    });
 
-    // Cursor Expansion on Interactive Elements
-    const interactables = document.querySelectorAll('a, button, .ultra-card');
-    interactables.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            cursor.style.width = '80px';
-            cursor.style.height = '80px';
-            cursor.style.background = 'rgba(0, 255, 102, 0.1)';
-            cursor.style.borderColor = 'var(--secondary)';
+    if (cursor && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            if (coords) {
+                coords.textContent = `X:${(e.clientX/10).toFixed(1)} Y:${(e.clientY/10).toFixed(1)}`;
+            }
         });
-        item.addEventListener('mouseleave', () => {
-            cursor.style.width = '40px';
-            cursor.style.height = '40px';
-            cursor.style.background = 'transparent';
-            cursor.style.borderColor = 'var(--primary)';
+
+        // Cursor Expansion on Interactive Elements
+        const interactables = document.querySelectorAll('a, button, .ultra-card');
+        interactables.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                cursor.style.width = '80px';
+                cursor.style.height = '80px';
+                cursor.style.background = 'rgba(0, 255, 102, 0.1)';
+                cursor.style.borderColor = 'var(--secondary)';
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.style.width = '40px';
+                cursor.style.height = '40px';
+                cursor.style.background = 'transparent';
+                cursor.style.borderColor = 'var(--primary)';
+            });
         });
-    });
+    }
 
     // --- MOUSE WHEEL HORIZONTAL SCROLL ---
     const horizContainer = document.querySelector('.horizontal-scroll-container');
